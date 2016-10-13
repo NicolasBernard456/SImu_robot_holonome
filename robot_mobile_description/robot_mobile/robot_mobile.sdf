@@ -1,0 +1,2540 @@
+<sdf version='1.4'>
+  <model name='robot_mobile'>
+    <link name='base_link'>
+      <pose>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.0100557 -0.042387 0.000121638 0 -0 0</pose>
+        <mass>3.47224</mass>
+        <inertia>
+          <ixx>0.045731</ixx>
+          <ixy>1.8611e-09</ixy>
+          <ixz>-1.71401e-08</ixz>
+          <iyy>0.0867543</iyy>
+          <iyz>1.24646e-09</iyz>
+          <izz>0.045731</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <link name='Roue1'>
+      <pose>-0.110056 -0.0685169 -0.173083 1.5708 -1.0472 1.11023e-16</pose>
+      <inertial>
+        <pose>-0.0211588 -2.31343e-06 9.24421e-06 0 -0 0</pose>
+        <mass>0.198356</mass>
+        <inertia>
+          <ixx>0.000199914</ixx>
+          <ixy>-1.53827e-09</ixy>
+          <ixz>6.15223e-09</ixz>
+          <iyy>0.000118334</iyy>
+          <iyz>1.17429e-08</iyz>
+          <izz>0.000118378</izz>
+        </inertia>
+      </inertial>
+      <collision name='Roue1_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/Roue1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Roue1_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/Roue1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='Joint_roue1' type='revolute'>
+      <child>Roue1</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>-0.5 -1.66533e-16 -0.866025</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roulette1'>
+      <pose>-0.104923 -0.11947 -0.189673 1.5708 0.50644 0.281069</pose>
+      <inertial>
+        <pose>-1.47207e-10 -5.70272e-12 1.70097e-11 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>5.89997e-18</ixy>
+          <ixz>-1.75987e-17</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-2.72665e-18</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roulette1_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roulette1_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roulette1' type='revolute'>
+      <child>roulette1</child>
+      <parent>Roue1</parent>
+      <axis>
+        <xyz>-0.840162 -0.242565 0.485068</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roulette10'>
+      <pose>-0.0984051 -0.110741 -0.215375 1.5708 -0.413668 -2.43468</pose>
+      <inertial>
+        <pose>2.90172e-10 -1.64317e-11 1.04113e-11 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-3.35059e-17</ixy>
+          <ixz>2.12329e-17</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-4.809e-18</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roulette10_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette10.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roulette10_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette10.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roulette10' type='revolute'>
+      <child>roulette10</child>
+      <parent>Roue1</parent>
+      <axis>
+        <xyz>0.696233 0.59471 -0.40197</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roulette11'>
+      <pose>-0.0804709 -0.0762875 -0.225729 1.5708 -0.0740418 -1.69963</pose>
+      <inertial>
+        <pose>-6.43509e-11 1.17221e-10 1.80745e-10 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-5.30104e-17</ixy>
+          <ixz>-8.17377e-17</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>5.9557e-16</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roulette11_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette11.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roulette11_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette11.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roulette11' type='revolute'>
+      <child>roulette11</child>
+      <parent>Roue1</parent>
+      <axis>
+        <xyz>0.128127 0.988995 -0.0739742</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roulette12'>
+      <pose>-0.0888881 -0.0372816 -0.220869 1.5708 0.301921 -1.00103</pose>
+      <inertial>
+        <pose>2.6547e-10 6.24885e-11 1.11312e-10 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>1.16579e-16</ixy>
+          <ixz>2.07664e-16</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>1.95527e-16</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roulette12_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette12.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roulette12_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette12.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roulette12' type='revolute'>
+      <child>roulette12</child>
+      <parent>Roue1</parent>
+      <axis>
+        <xyz>-0.515034 0.80394 0.297355</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roulette13'>
+      <pose>-0.118726 -0.0165729 -0.203642 1.5708 0.517257 -0.171049</pose>
+      <inertial>
+        <pose>-2.91913e-10 -1.0192e-10 1.08625e-10 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>2.09082e-16</ixy>
+          <ixz>-2.22836e-16</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-3.11208e-16</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roulette13_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette13.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roulette13_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette13.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roulette13' type='revolute'>
+      <child>roulette13</child>
+      <parent>Roue1</parent>
+      <axis>
+        <xyz>-0.856495 0.147948 0.494498</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roulette14'>
+      <pose>-0.152506 -0.0262924 -0.184139 1.5708 0.413668 0.706917</pose>
+      <inertial>
+        <pose>2.03978e-10 8.62166e-11 3.11256e-11 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>1.23586e-16</ixy>
+          <ixz>4.46216e-17</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>7.54346e-17</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roulette14_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette14.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roulette14_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette14.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roulette14' type='revolute'>
+      <child>roulette14</child>
+      <parent>Roue1</parent>
+      <axis>
+        <xyz>-0.696233 -0.59471 0.40197</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roulette15'>
+      <pose>-0.17044 -0.0607464 -0.173785 1.5708 0.0740418 1.44196</pose>
+      <inertial>
+        <pose>-6.4518e-11 -1.17214e-10 1.81391e-10 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>5.31452e-17</ixy>
+          <ixz>-8.22435e-17</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-5.97669e-16</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roulette15_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette15.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roulette15_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette15.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roulette15' type='revolute'>
+      <child>roulette15</child>
+      <parent>Roue1</parent>
+      <axis>
+        <xyz>-0.128127 -0.988995 0.0739742</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roulette16'>
+      <pose>-0.162023 -0.0997523 -0.178645 1.5708 -0.301921 2.14056</pose>
+      <inertial>
+        <pose>2.89258e-10 -5.87843e-11 1.00625e-10 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-1.19495e-16</ixy>
+          <ixz>2.04547e-16</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-1.66276e-16</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roulette16_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette16.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roulette16_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette16.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roulette16' type='revolute'>
+      <child>roulette16</child>
+      <parent>Roue1</parent>
+      <axis>
+        <xyz>0.515034 -0.80394 -0.297355</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roulette2'>
+      <pose>-0.0769516 -0.0955379 -0.205822 1.5708 0.26016 1.09161</pose>
+      <inertial>
+        <pose>3.32048e-10 1.07747e-10 -1.7637e-10 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>2.51425e-16</ixy>
+          <ixz>-4.11556e-16</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-5.34185e-16</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roulette2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roulette2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roulette2' type='revolute'>
+      <child>roulette2</child>
+      <parent>Roue1</parent>
+      <axis>
+        <xyz>-0.445544 -0.857509 0.257235</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roulette3'>
+      <pose>-0.0718287 -0.0557769 -0.208779 1.5708 -0.121582 1.78404</pose>
+      <inertial>
+        <pose>-1.37565e-10 1.59587e-10 -2.25921e-10 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-1.54278e-16</ixy>
+          <ixz>2.18407e-16</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-1.01348e-15</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roulette3_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette3.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roulette3_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette3.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roulette3' type='revolute'>
+      <child>roulette3</child>
+      <parent>Roue1</parent>
+      <axis>
+        <xyz>0.210068 -0.970135 -0.121283</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roulette4'>
+      <pose>-0.0925548 -0.0234789 -0.196813 1.5708 -0.443113 2.53573</pose>
+      <inertial>
+        <pose>1.118e-10 -3.78779e-11 -3.30498e-11 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-2.97596e-17</ixy>
+          <ixz>-2.59665e-17</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>3.51899e-17</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roulette4_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette4.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roulette4_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette4.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roulette4' type='revolute'>
+      <child>roulette4</child>
+      <parent>Roue1</parent>
+      <axis>
+        <xyz>0.742624 -0.51447 -0.428754</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roulette5'>
+      <pose>-0.126989 -0.0175635 -0.176933 1.5708 -0.50644 -2.86052</pose>
+      <inertial>
+        <pose>-3.75332e-10 1.36488e-10 -1.08739e-10 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-3.60007e-16</ixy>
+          <ixz>2.86816e-16</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-4.17198e-16</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roulette5_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette5.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roulette5_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette5.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roulette5' type='revolute'>
+      <child>roulette5</child>
+      <parent>Roue1</parent>
+      <axis>
+        <xyz>-0.840162 -0.242565 0.485068</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roulette6'>
+      <pose>-0.15496 -0.0414959 -0.160783 1.5708 -0.26016 -2.04998</pose>
+      <inertial>
+        <pose>3.03797e-10 -1.14579e-10 -2.00423e-10 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-2.44618e-16</ixy>
+          <ixz>-4.27891e-16</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>6.45528e-16</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roulette6_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette6.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roulette6_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette6.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roulette6' type='revolute'>
+      <child>roulette6</child>
+      <parent>Roue1</parent>
+      <axis>
+        <xyz>0.445544 0.857509 -0.257235</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roulette7'>
+      <pose>-0.160083 -0.0812569 -0.157826 1.5708 0.121582 -1.35755</pose>
+      <inertial>
+        <pose>-1.3896e-10 -1.61623e-10 -2.27979e-10 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>1.57833e-16</ixy>
+          <ixz>2.22632e-16</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>1.03576e-15</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roulette7_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette7.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roulette7_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette7.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roulette7' type='revolute'>
+      <child>roulette7</child>
+      <parent>Roue1</parent>
+      <axis>
+        <xyz>-0.210068 0.970135 0.121283</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roulette8'>
+      <pose>-0.139357 -0.113555 -0.169792 1.5708 0.443113 -0.605859</pose>
+      <inertial>
+        <pose>2.8647e-10 1.69602e-11 -3.61701e-11 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>3.41437e-17</ixy>
+          <ixz>-7.28165e-17</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-1.72441e-17</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roulette8_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette8.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roulette8_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette8.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roulette8' type='revolute'>
+      <child>roulette8</child>
+      <parent>Roue1</parent>
+      <axis>
+        <xyz>-0.742624 0.51447 0.428754</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roulette9'>
+      <pose>-0.132185 -0.120461 -0.195872 1.5708 -0.517257 2.97054</pose>
+      <inertial>
+        <pose>-1.92264e-10 4.7241e-11 1.44477e-11 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-6.38297e-17</ixy>
+          <ixz>-1.95209e-17</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>1.91859e-17</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roulette9_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette9.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roulette9_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roulette9.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roulette9' type='revolute'>
+      <child>roulette9</child>
+      <parent>Roue1</parent>
+      <axis>
+        <xyz>0.856495 -0.147948 -0.494498</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='Roue2'>
+      <pose>0.189944 -0.0685169 0.00012167 1.5708 -0 0</pose>
+      <inertial>
+        <pose>0.0211588 -9.16244e-06 -2.6186e-06 0 -0 0</pose>
+        <mass>0.198356</mass>
+        <inertia>
+          <ixx>0.000199914</ixx>
+          <ixy>6.09718e-09</ixy>
+          <ixz>1.74444e-09</ixz>
+          <iyy>0.000118377</iyy>
+          <iyz>-1.32265e-08</iyz>
+          <izz>0.000118335</izz>
+        </inertia>
+      </inertial>
+      <collision name='Roue2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/Roue2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Roue2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/Roue2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='Joint_roue2' type='revolute'>
+      <child>Roue2</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue2_roulette1'>
+      <pose>0.201744 -0.119014 -0.0143219 1.5708 1.29221 1.5708</pose>
+      <inertial>
+        <pose>-1.29763e-10 2.26836e-10 0 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-2.06855e-16</ixy>
+          <ixz>-2.4834e-22</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>2.88095e-23</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue2_roulette1_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue2_roulette1_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue2_roulette1' type='revolute'>
+      <child>roue2_roulette1</child>
+      <parent>Roue2</parent>
+      <axis>
+        <xyz>3.54231e-15 -0.275 0.961444</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue2_roulette10'>
+      <pose>0.220744 -0.101218 0.0412212 1.5708 0.672092 -1.5708</pose>
+      <inertial>
+        <pose>-1.58599e-10 -9.96642e-11 0 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>1.11081e-16</ixy>
+          <ixz>2.95098e-23</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-1.69176e-23</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue2_roulette10_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette10.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue2_roulette10_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette10.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue2_roulette10' type='revolute'>
+      <child>roue2_roulette10</child>
+      <parent>Roue2</parent>
+      <axis>
+        <xyz>2.22045e-15 0.782521 0.622625</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue2_roulette11'>
+      <pose>0.220744 -0.0625786 0.0523069 1.5708 -0.113306 -1.5708</pose>
+      <inertial>
+        <pose>3.70513e-11 -1.62801e-10 -2.77556e-17 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-4.23946e-17</ixy>
+          <ixz>-1.89414e-22</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-5.47885e-24</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue2_roulette11_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette11.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue2_roulette11_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette11.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue2_roulette11' type='revolute'>
+      <child>roue2_roulette11</child>
+      <parent>Roue2</parent>
+      <axis>
+        <xyz>4.16334e-16 0.993588 -0.113064</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue2_roulette12'>
+      <pose>0.220744 -0.0274174 0.0328232 1.5708 -0.898704 -1.5708</pose>
+      <inertial>
+        <pose>-1.58599e-10 -9.96642e-11 2.77556e-17 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>1.11081e-16</ixy>
+          <ixz>4.03193e-23</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>7.06605e-25</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue2_roulette12_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette12.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue2_roulette12_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette12.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue2_roulette12' type='revolute'>
+      <child>roue2_roulette12</child>
+      <parent>Roue2</parent>
+      <axis>
+        <xyz>2.79637e-15 0.622625 -0.782521</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue2_roulette13'>
+      <pose>0.220744 -0.0163317 -0.00581666 1.5708 -1.45749 1.5708</pose>
+      <inertial>
+        <pose>3.70513e-11 1.62801e-10 0 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>4.23899e-17</ixy>
+          <ixz>4.77325e-23</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>1.31896e-24</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue2_roulette13_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette13.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue2_roulette13_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette13.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue2_roulette13' type='revolute'>
+      <child>roue2_roulette13</child>
+      <parent>Roue2</parent>
+      <axis>
+        <xyz>3.4972e-15 -0.113064 -0.993588</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue2_roulette14'>
+      <pose>0.220744 -0.0358154 -0.0409779 1.5708 -0.672092 1.5708</pose>
+      <inertial>
+        <pose>-1.58599e-10 9.96642e-11 0 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-1.11081e-16</ixy>
+          <ixz>-1.36741e-22</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-1.93126e-24</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue2_roulette14_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette14.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue2_roulette14_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette14.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue2_roulette14' type='revolute'>
+      <child>roue2_roulette14</child>
+      <parent>Roue2</parent>
+      <axis>
+        <xyz>2.22045e-15 -0.782521 -0.622625</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue2_roulette15'>
+      <pose>0.220744 -0.0744552 -0.0520635 1.5708 0.113306 1.5708</pose>
+      <inertial>
+        <pose>3.70513e-11 1.62801e-10 2.77556e-17 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>4.23899e-17</ixy>
+          <ixz>-1.55847e-22</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-1.65386e-23</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue2_roulette15_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette15.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue2_roulette15_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette15.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue2_roulette15' type='revolute'>
+      <child>roue2_roulette15</child>
+      <parent>Roue2</parent>
+      <axis>
+        <xyz>2.77556e-16 -0.993588 0.113064</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue2_roulette16'>
+      <pose>0.220744 -0.109616 -0.0325798 1.5708 0.898704 1.5708</pose>
+      <inertial>
+        <pose>-1.58599e-10 9.96643e-11 0 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-1.11082e-16</ixy>
+          <ixz>3.4276e-24</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-4.91258e-24</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue2_roulette16_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette16.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue2_roulette16_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette16.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue2_roulette16' type='revolute'>
+      <child>roue2_roulette16</child>
+      <parent>Roue2</parent>
+      <axis>
+        <xyz>2.92821e-15 -0.622625 0.782521</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue2_roulette2'>
+      <pose>0.201744 -0.114437 0.0256153 1.5708 1.06399 -1.5708</pose>
+      <inertial>
+        <pose>2.17558e-10 -1.95936e-10 0 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-2.99565e-16</ixy>
+          <ixz>2.54017e-23</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>8.68416e-25</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue2_roulette2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue2_roulette2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue2_roulette2' type='revolute'>
+      <child>roue2_roulette2</child>
+      <parent>Roue2</parent>
+      <axis>
+        <xyz>3.10862e-15 0.485389 0.874298</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue2_roulette3'>
+      <pose>0.201744 -0.0829605 0.0506186 1.5708 -0.27859 1.5708</pose>
+      <inertial>
+        <pose>1.29763e-10 -2.26836e-10 -2.77556e-17 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-2.06855e-16</ixy>
+          <ixz>2.85205e-22</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-3.1538e-23</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue2_roulette3_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette3.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue2_roulette3_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette3.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue2_roulette3' type='revolute'>
+      <child>roue2_roulette3</child>
+      <parent>Roue2</parent>
+      <axis>
+        <xyz>7.77156e-16 -0.961444 -0.275</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue2_roulette4'>
+      <pose>0.201744 -0.0430233 0.0460415 1.5708 0.506808 1.5708</pose>
+      <inertial>
+        <pose>-2.17558e-10 -1.95936e-10 0 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>2.99565e-16</ixy>
+          <ixz>-1.37155e-22</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-1.55724e-23</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue2_roulette4_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette4.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue2_roulette4_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette4.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue2_roulette4' type='revolute'>
+      <child>roue2_roulette4</child>
+      <parent>Roue2</parent>
+      <axis>
+        <xyz>1.72085e-15 -0.874298 0.485389</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue2_roulette5'>
+      <pose>0.201744 -0.01802 0.0145652 1.5708 1.29221 1.5708</pose>
+      <inertial>
+        <pose>1.29763e-10 -2.26836e-10 2.77556e-17 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-2.06854e-16</ixy>
+          <ixz>5.09696e-23</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-3.14959e-23</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue2_roulette5_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette5.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue2_roulette5_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette5.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue2_roulette5' type='revolute'>
+      <child>roue2_roulette5</child>
+      <parent>Roue2</parent>
+      <axis>
+        <xyz>3.50241e-15 -0.275 0.961444</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue2_roulette6'>
+      <pose>0.201744 -0.022597 -0.0253719 1.5708 1.06399 -1.5708</pose>
+      <inertial>
+        <pose>-2.17558e-10 1.95936e-10 2.77556e-17 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-2.99564e-16</ixy>
+          <ixz>-9.73799e-23</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-2.92717e-23</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue2_roulette6_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette6.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue2_roulette6_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette6.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue2_roulette6' type='revolute'>
+      <child>roue2_roulette6</child>
+      <parent>Roue2</parent>
+      <axis>
+        <xyz>3.10862e-15 0.485389 0.874298</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue2_roulette7'>
+      <pose>0.201744 -0.0540734 -0.0503753 1.5708 -0.27859 1.5708</pose>
+      <inertial>
+        <pose>-1.29763e-10 2.26836e-10 0 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-2.06855e-16</ixy>
+          <ixz>-2.52383e-22</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>3.86228e-23</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue2_roulette7_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette7.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue2_roulette7_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette7.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue2_roulette7' type='revolute'>
+      <child>roue2_roulette7</child>
+      <parent>Roue2</parent>
+      <axis>
+        <xyz>7.77156e-16 -0.961444 -0.275</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue2_roulette8'>
+      <pose>0.201744 -0.0940105 -0.0457982 1.5708 0.506808 1.5708</pose>
+      <inertial>
+        <pose>2.17558e-10 1.95936e-10 0 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>2.99565e-16</ixy>
+          <ixz>4.72303e-22</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>1.89703e-23</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue2_roulette8_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette8.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue2_roulette8_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette8.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue2_roulette8' type='revolute'>
+      <child>roue2_roulette8</child>
+      <parent>Roue2</parent>
+      <axis>
+        <xyz>1.7486e-15 -0.874298 0.485389</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue2_roulette9'>
+      <pose>0.220744 -0.120702 0.00606 1.5708 1.45749 -1.5708</pose>
+      <inertial>
+        <pose>3.70513e-11 -1.62801e-10 0 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-4.23898e-17</ixy>
+          <ixz>-1.23372e-22</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-1.01547e-23</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue2_roulette9_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette9.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue2_roulette9_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue2_roulette9.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue2_roulette9' type='revolute'>
+      <child>roue2_roulette9</child>
+      <parent>Roue2</parent>
+      <axis>
+        <xyz>3.66374e-15 0.113064 0.993588</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='Roue3'>
+      <pose>-0.110259 -0.0685169 0.173679 1.5708 -1.0472 3.14159</pose>
+      <inertial>
+        <pose>0.0210348 2.07333e-06 9.30105e-06 0 -0 0</pose>
+        <mass>0.198356</mass>
+        <inertia>
+          <ixx>0.000199914</ixx>
+          <ixy>1.38167e-09</ixy>
+          <ixz>6.18959e-09</ixz>
+          <iyy>0.000118333</iyy>
+          <iyz>-1.06371e-08</iyz>
+          <izz>0.000118379</izz>
+        </inertia>
+      </inertial>
+      <collision name='Roue3_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/Roue3.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Roue3_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/Roue3.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='Joint_roue3' type='revolute'>
+      <child>Roue3</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>0.5 -1.66533e-15 -0.866025</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue3_roulette1'>
+      <pose>-0.108155 -0.120261 0.18805 1.5708 0.515066 -2.94323</pose>
+      <inertial>
+        <pose>2.16801e-10 5.13997e-11 3.05013e-11 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>7.83109e-17</ixy>
+          <ixz>4.64759e-17</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>4.40699e-17</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue3_roulette1_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue3_roulette1_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue3_roulette1' type='revolute'>
+      <child>roue3_roulette1</child>
+      <parent>Roue3</parent>
+      <axis>
+        <xyz>0.853194 0.171501 0.492592</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue3_roulette10'>
+      <pose>-0.135362 -0.119778 0.194281 1.5708 -0.509795 -0.252174</pose>
+      <inertial>
+        <pose>1.29132e-10 -3.73365e-12 2.93066e-11 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-3.38794e-18</ixy>
+          <ixz>2.65952e-17</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-3.07577e-18</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue3_roulette10_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette10.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue3_roulette10_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette10.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue3_roulette10' type='revolute'>
+      <child>roue3_roulette10</child>
+      <parent>Roue3</parent>
+      <axis>
+        <xyz>-0.845238 0.217783 -0.487999</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue3_roulette11'>
+      <pose>-0.163851 -0.096676 0.177833 1.5708 0.271388 2.07367</pose>
+      <inertial>
+        <pose>3.40532e-10 9.51136e-11 1.56343e-10 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>2.27616e-16</ixy>
+          <ixz>3.74146e-16</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>4.18008e-16</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue3_roulette11_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette11.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue3_roulette11_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette11.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue3_roulette11' type='revolute'>
+      <child>roue3_roulette11</child>
+      <parent>Roue3</parent>
+      <axis>
+        <xyz>0.464309 -0.84413 0.268069</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue3_roulette12'>
+      <pose>-0.169849 -0.0570785 0.17437 1.5708 0.109108 -1.76169</pose>
+      <inertial>
+        <pose>1.1737e-10 1.54104e-10 -2.1504e-10 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>1.27108e-16</ixy>
+          <ixz>-1.77369e-16</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-9.31528e-16</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue3_roulette12_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette12.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue3_roulette12_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette12.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue3_roulette12' type='revolute'>
+      <child>roue3_roulette12</child>
+      <parent>Roue3</parent>
+      <axis>
+        <xyz>-0.188606 -0.975997 -0.108892</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue3_roulette13'>
+      <pose>-0.149842 -0.0241815 0.185921 1.5708 -0.435722 0.632788</pose>
+      <inertial>
+        <pose>8.58563e-11 -4.18188e-11 3.05875e-11 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-2.52317e-17</ixy>
+          <ixz>1.84553e-17</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-3.59566e-17</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue3_roulette13_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette13.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue3_roulette13_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette13.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue3_roulette13' type='revolute'>
+      <child>roue3_roulette13</child>
+      <parent>Roue3</parent>
+      <axis>
+        <xyz>-0.731038 -0.536138 -0.422065</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue3_roulette14'>
+      <pose>-0.11555 -0.0172556 0.20572 1.5708 -0.509795 -0.252174</pose>
+      <inertial>
+        <pose>-3.58947e-10 1.35911e-10 1.09613e-10 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-3.42837e-16</ixy>
+          <ixz>-2.76501e-16</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>4.18775e-16</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue3_roulette14_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette14.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue3_roulette14_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette14.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue3_roulette14' type='revolute'>
+      <child>roue3_roulette14</child>
+      <parent>Roue3</parent>
+      <axis>
+        <xyz>-0.845238 0.217783 -0.487999</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue3_roulette15'>
+      <pose>-0.0870601 -0.0403579 0.222168 1.5708 0.271388 2.07367</pose>
+      <inertial>
+        <pose>-3.1608e-10 -1.04638e-10 -1.85352e-10 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>2.32429e-16</ixy>
+          <ixz>4.11715e-16</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>5.45195e-16</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue3_roulette15_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette15.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue3_roulette15_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette15.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue3_roulette15' type='revolute'>
+      <child>roue3_roulette15</child>
+      <parent>Roue3</parent>
+      <axis>
+        <xyz>0.464309 -0.84413 0.268069</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue3_roulette16'>
+      <pose>-0.0810621 -0.0799553 0.225631 1.5708 -0.109108 1.37991</pose>
+      <inertial>
+        <pose>1.19836e-10 -1.58141e-10 -2.1911e-10 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-1.33179e-16</ixy>
+          <ixz>-1.84524e-16</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>9.7402e-16</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue3_roulette16_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette16.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue3_roulette16_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette16.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue3_roulette16' type='revolute'>
+      <child>roue3_roulette16</child>
+      <parent>Roue3</parent>
+      <axis>
+        <xyz>-0.188606 -0.975997 -0.108892</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue3_roulette2'>
+      <pose>-0.142126 -0.111475 0.168436 1.5708 0.421303 2.4594</pose>
+      <inertial>
+        <pose>-3.22857e-10 -2.31279e-11 2.59915e-11 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>5.24751e-17</ixy>
+          <ixz>-5.89717e-17</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-1.68978e-17</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue3_roulette2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue3_roulette2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue3_roulette2' type='revolute'>
+      <child>roue3_roulette2</child>
+      <parent>Roue3</parent>
+      <axis>
+        <xyz>0.708322 -0.575361 0.40895</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue3_roulette3'>
+      <pose>-0.160767 -0.0775245 0.157674 1.5708 0.085856 1.72043</pose>
+      <inertial>
+        <pose>8.26524e-11 1.33797e-10 1.9701e-10 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>7.77145e-17</ixy>
+          <ixz>1.14432e-16</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>7.40964e-16</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue3_roulette3_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette3.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue3_roulette3_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette3.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue3_roulette3' type='revolute'>
+      <child>roue3_roulette3</child>
+      <parent>Roue3</parent>
+      <axis>
+        <xyz>0.148524 -0.985184 0.0857505</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue3_roulette4'>
+      <pose>-0.153158 -0.0382978 0.162067 1.5708 -0.291804 1.02363</pose>
+      <inertial>
+        <pose>-2.71242e-10 7.57189e-11 1.31179e-10 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-1.44332e-16</ixy>
+          <ixz>-2.50049e-16</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>2.7921e-16</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue3_roulette4_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette4.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue3_roulette4_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette4.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue3_roulette4' type='revolute'>
+      <child>roue3_roulette4</child>
+      <parent>Roue3</parent>
+      <axis>
+        <xyz>-0.498277 -0.8179 -0.28768</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue3_roulette5'>
+      <pose>-0.123756 -0.0167731 0.179042 1.5708 -0.515066 0.198367</pose>
+      <inertial>
+        <pose>3.21436e-10 -1.10095e-10 1.1317e-10 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-2.48693e-16</ixy>
+          <ixz>2.55641e-16</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-3.50237e-16</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue3_roulette5_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette5.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue3_roulette5_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette5.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue3_roulette5' type='revolute'>
+      <child>roue3_roulette5</child>
+      <parent>Roue3</parent>
+      <axis>
+        <xyz>-0.853194 -0.171501 -0.492592</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue3_roulette6'>
+      <pose>-0.0897852 -0.0255592 0.198655 1.5708 -0.421303 -0.682188</pose>
+      <inertial>
+        <pose>-2.39629e-10 8.33674e-11 3.97742e-11 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-1.4039e-16</ixy>
+          <ixz>-6.69795e-17</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>9.32097e-17</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue3_roulette6_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette6.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue3_roulette6_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette6.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue3_roulette6' type='revolute'>
+      <child>roue3_roulette6</child>
+      <parent>Roue3</parent>
+      <axis>
+        <xyz>-0.708322 0.575361 -0.40895</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue3_roulette7'>
+      <pose>-0.0711442 -0.0595093 0.209418 1.5708 -0.085856 -1.42117</pose>
+      <inertial>
+        <pose>8.21179e-11 -1.3382e-10 1.95231e-10 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-7.72252e-17</ixy>
+          <ixz>1.12665e-16</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-7.34398e-16</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue3_roulette7_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette7.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue3_roulette7_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette7.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue3_roulette7' type='revolute'>
+      <child>roue3_roulette7</child>
+      <parent>Roue3</parent>
+      <axis>
+        <xyz>-0.148524 0.985184 -0.0857505</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue3_roulette8'>
+      <pose>-0.0787532 -0.098736 0.205025 1.5708 0.291804 -2.11796</pose>
+      <inertial>
+        <pose>-2.96135e-10 -7.19801e-11 1.23262e-10 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>1.49798e-16</ixy>
+          <ixz>-2.5652e-16</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-2.49404e-16</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue3_roulette8_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette8.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue3_roulette8_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette8.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue3_roulette8' type='revolute'>
+      <child>roue3_roulette8</child>
+      <parent>Roue3</parent>
+      <axis>
+        <xyz>0.498277 0.8179 0.28768</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+    <link name='roue3_roulette9'>
+      <pose>-0.101069 -0.112852 0.21408 1.5708 -0.435722 0.632788</pose>
+      <inertial>
+        <pose>-2.63649e-10 8.35804e-12 -2.56007e-11 0 -0 0</pose>
+        <mass>0.00837423</mass>
+        <inertia>
+          <ixx>4.31412e-07</ixx>
+          <ixy>-1.54866e-17</ixy>
+          <ixz>4.74328e-17</ixz>
+          <iyy>7.80239e-07</iyy>
+          <iyz>-6.01473e-18</iyz>
+          <izz>7.80239e-07</izz>
+        </inertia>
+      </inertial>
+      <collision name='roue3_roulette9_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette9.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='roue3_roulette9_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://robot_mobile/meshes/roue3_roulette9.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <velocity_decay>
+        <linear>0</linear>
+        <angular>0</angular>
+      </velocity_decay>
+    </link>
+    <joint name='joint_roue3_roulette9' type='revolute'>
+      <child>roue3_roulette9</child>
+      <parent>Roue3</parent>
+      <axis>
+        <xyz>-0.731038 -0.536138 -0.422065</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics/>
+      </axis>
+    </joint>
+  </model>
+</sdf>

@@ -1,0 +1,34 @@
+robot_mobile:
+   # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 100
+    default : true
+  Roue1_effort_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: Joint_roue1
+    pid: {p: 100.0, i: 0.1, d: 10.0}
+  Roue2_effort_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: Joint_roue2
+    pid: {p: 100.0, i: 0.1, d: 10.0}
+  Roue3_effort_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: Joint_roue3
+    pid: {p: 100.0, i: 0.1, d: 10.0}
+    
+    
+    
+    
+    
+    
+    #joint_trajectory_controller:
+    #type: "effort_controllers/JointTrajectoryController"
+    #joints:
+      #- Joint_roue1
+      #- Joint_roue2
+      #- Joint_roue3
+    #gains:
+      #Joint_roue1: {p: 1.0,i: 0.0, d: 0.0}
+      #Joint_roue2: {p: 1.0,i: 0.0, d: 0.0}
+      #Joint_roue3: {p: 1.0,i: 0.0, d: 0.0}

@@ -1,0 +1,2746 @@
+<robot
+  name="robot_mobile">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.010055660308745 -0.0423870086324682 0.000121637856789193"
+        rpy="0 0 0" />
+      <mass
+        value="3.47223567331962" />
+      <inertia
+        ixx="0.0457310176438819"
+        ixy="1.86110118436277E-09"
+        ixz="-1.71400748941766E-08"
+        iyy="0.0867543372140893"
+        iyz="1.24646135762742E-09"
+        izz="0.0457310260272979" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Roue1">
+    <inertial>
+      <origin
+        xyz="-0.0211588380723036 -2.31343286816177E-06 9.24421394769837E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.198356198512862" />
+      <inertia
+        ixx="0.00019991381116025"
+        ixy="-1.5382727945235E-09"
+        ixz="6.15222722511404E-09"
+        iyy="0.000118333847746111"
+        iyz="1.17428945784077E-08"
+        izz="0.000118377952645097" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/Roue1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/Roue1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_roue1"
+    type="continuous">
+    <origin
+      xyz="-0.110055669635866 -0.0685169223077406 -0.17308341083394"
+      rpy="1.5707963267949 -1.04719755119659 1.060540212046E-16" />
+    <parent
+      link="base_link" />
+    <child
+      link="Roue1" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roulette1">
+    <inertial>
+      <origin
+        xyz="-1.47206694750546E-10 -5.70271607713835E-12 1.70096714491308E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031397" />
+      <inertia
+        ixx="4.31411689246923E-07"
+        ixy="5.89996911661104E-18"
+        ixz="-1.75986513438699E-17"
+        iyy="7.8023874637289E-07"
+        iyz="-2.7266453793259E-18"
+        izz="7.80238746365671E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roulette1"
+    type="continuous">
+    <origin
+      xyz="-0.0118 -0.0127400040790379 0.0509534309000108"
+      rpy="-0.139140116757764 0.245009073206653 -1.5707963267949" />
+    <parent
+      link="Roue1" />
+    <child
+      link="roulette1" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roulette2">
+    <inertial>
+      <origin
+        xyz="3.32048485929271E-10 1.07746866984115E-10 -1.76369953364119E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031395" />
+      <inertia
+        ixx="4.31411690438619E-07"
+        ixy="2.51424697089265E-16"
+        ixz="-4.11555614023201E-16"
+        iyy="7.80238745994068E-07"
+        iyz="-5.34184994250399E-16"
+        izz="7.80238745446006E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roulette2"
+    type="continuous">
+    <origin
+      xyz="-0.0118 -0.0450380597907498 0.0270209732374857"
+      rpy="-0.459706120462856 1.03040723660411 -1.5707963267949" />
+    <parent
+      link="Roue1" />
+    <child
+      link="roulette2" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roulette3">
+    <inertial>
+      <origin
+        xyz="-1.37564876157015E-10 1.59586566184089E-10 -2.2592082371542E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031399" />
+      <inertia
+        ixx="4.31411691388528E-07"
+        ixy="-1.5427816411387E-16"
+        ixz="2.18407008698158E-16"
+        iyy="7.80238747838095E-07"
+        iyz="-1.01347958834279E-15"
+        izz="7.80238747119254E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roulette3"
+    type="continuous">
+    <origin
+      xyz="-0.0118 -0.0509534309000107 -0.0127400040790381"
+      rpy="2.63102228985091 1.32578725358823 1.5707963267949" />
+    <parent
+      link="Roue1" />
+    <child
+      link="roulette3" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roulette4">
+    <inertial>
+      <origin
+        xyz="1.11800346758173E-10 -3.78778952647707E-11 -3.30497990086442E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031395" />
+      <inertia
+        ixx="4.31411689308909E-07"
+        ixy="-2.97596324077754E-17"
+        ixz="-2.59665361519094E-17"
+        iyy="7.80238746524351E-07"
+        iyz="3.51898646796717E-17"
+        izz="7.80238746533977E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roulette4"
+    type="continuous">
+    <origin
+      xyz="-0.0118 -0.0270209732374855 -0.0450380597907499"
+      rpy="2.85286358035719 0.540389090190783 1.5707963267949" />
+    <parent
+      link="Roue1" />
+    <child
+      link="roulette4" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roulette5">
+    <inertial>
+      <origin
+        xyz="-3.75331536683898E-10 1.36487876556401E-10 -1.08739160037397E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031394" />
+      <inertia
+        ixx="4.31411690093916E-07"
+        ixy="-3.60007156715981E-16"
+        ixz="2.86815837973028E-16"
+        iyy="7.80238745021713E-07"
+        iyz="-4.17198282820013E-16"
+        izz="7.80238745212995E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roulette5"
+    type="continuous">
+    <origin
+      xyz="-0.0118 0.0127400040790376 -0.0509534309000109"
+      rpy="-3.00245253683203 -0.245009073206653 1.5707963267949" />
+    <parent
+      link="Roue1" />
+    <child
+      link="roulette5" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="roulette6">
+    <inertial>
+      <origin
+        xyz="3.03796529599332E-10 -1.14578735388449E-10 -2.00423358465152E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031397" />
+      <inertia
+        ixx="4.31411690736083E-07"
+        ixy="-2.44618059439138E-16"
+        ixz="-4.278912929206E-16"
+        iyy="7.80238746501321E-07"
+        iyz="6.45528037649794E-16"
+        izz="7.8023874574119E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roulette6"
+    type="continuous">
+    <origin
+      xyz="-0.0118 0.0450380597907497 -0.027020973237486"
+      rpy="-2.68188653312694 -1.0304072366041 1.5707963267949" />
+    <parent
+      link="Roue1" />
+    <child
+      link="roulette6" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roulette7">
+    <inertial>
+      <origin
+        xyz="-1.38960426498969E-10 -1.61623298078339E-10 -2.27978802502804E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031394" />
+      <inertia
+        ixx="4.31411691433173E-07"
+        ixy="1.57832913239312E-16"
+        ixz="2.22632326676418E-16"
+        iyy="7.80238747858923E-07"
+        iyz="1.03576425590708E-15"
+        izz="7.80238747132215E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roulette7"
+    type="continuous">
+    <origin
+      xyz="-0.0118 0.0509534309000109 0.0127400040790378"
+      rpy="0.51057036373888 -1.32578725358824 -1.5707963267949" />
+    <parent
+      link="Roue1" />
+    <child
+      link="roulette7" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roulette8">
+    <inertial>
+      <origin
+        xyz="2.8647017397132E-10 1.69602110133837E-11 -3.61700669415654E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031397" />
+      <inertia
+        ixx="4.31411689282738E-07"
+        ixy="3.41437061979187E-17"
+        ixz="-7.28164578601368E-17"
+        iyy="7.8023874555267E-07"
+        iyz="-1.72441217333297E-17"
+        izz="7.80238745523981E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette8.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette8.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roulette8"
+    type="continuous">
+    <origin
+      xyz="-0.0118 0.0270209732374859 0.0450380597907497"
+      rpy="0.288729073232605 -0.54038909019079 -1.5707963267949" />
+    <parent
+      link="Roue1" />
+    <child
+      link="roulette8" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roulette9">
+    <inertial>
+      <origin
+        xyz="-1.92264100473682E-10 4.72409888985226E-11 1.44477485530814E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031398" />
+      <inertia
+        ixx="4.31411689306476E-07"
+        ixy="-6.38296694867499E-17"
+        ixz="-1.95209396781043E-17"
+        iyy="7.80238746155643E-07"
+        iyz="1.91859116776856E-17"
+        izz="7.80238746212509E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette9.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette9.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roulette9"
+    type="continuous">
+    <origin
+      xyz="-0.0308 0.00777054372791233 0.051943993633419"
+      rpy="3.05638145708313 0.148493497140428 1.5707963267949" />
+    <parent
+      link="Roue1" />
+    <child
+      link="roulette9" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roulette10">
+    <inertial>
+      <origin
+        xyz="2.9017245550822E-10 -1.64317448536622E-11 1.04113384580273E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031394" />
+      <inertia
+        ixx="4.31411689248511E-07"
+        ixy="-3.35058506839668E-17"
+        ixz="2.12328660563992E-17"
+        iyy="7.80238745488932E-07"
+        iyz="-4.80900308825669E-18"
+        izz="7.80238745493475E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette10.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette10.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roulette10"
+    type="continuous">
+    <origin
+      xyz="-0.0308 -0.0312353459765881 0.0422245543036148"
+      rpy="-2.8108490896334 -0.636904666257029 1.5707963267949" />
+    <parent
+      link="Roue1" />
+    <child
+      link="roulette10" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roulette11">
+    <inertial>
+      <origin
+        xyz="-6.43508718534136E-11 1.17220705364574E-10 1.80744752498185E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031395" />
+      <inertia
+        ixx="4.31411690542447E-07"
+        ixy="-5.30104254208324E-17"
+        ixz="-8.17376967194723E-17"
+        iyy="7.80238747529442E-07"
+        iyz="5.95569531081332E-16"
+        izz="7.80238746997375E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roulette11"
+    type="continuous">
+    <origin
+      xyz="-0.0308 -0.0519439936334191 0.00777054372791215"
+      rpy="-2.62277225620327 -1.42230282965447 1.5707963267949" />
+    <parent
+      link="Roue1" />
+    <child
+      link="roulette11" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roulette12">
+    <inertial>
+      <origin
+        xyz="2.65470458116202E-10 6.24885143629683E-11 1.11312292716548E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031396" />
+      <inertia
+        ixx="4.31411689695936E-07"
+        ixy="1.16578812126724E-16"
+        ixz="2.07664010418793E-16"
+        iyy="7.80238746027096E-07"
+        iyz="1.95526557680231E-16"
+        izz="7.80238745788565E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette12.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette12.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roulette12"
+    type="continuous">
+    <origin
+      xyz="-0.0308 -0.0422245543036147 -0.0312353459765883"
+      rpy="0.434562860492647 -0.93389166053787 -1.5707963267949" />
+    <parent
+      link="Roue1" />
+    <child
+      link="roulette12" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roulette13">
+    <inertial>
+      <origin
+        xyz="-2.91913322507387E-10 -1.01919944706097E-10 1.08624928496504E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031396" />
+      <inertia
+        ixx="4.31411689861556E-07"
+        ixy="2.09081591607146E-16"
+        ixz="-2.22836064570012E-16"
+        iyy="7.80238745803326E-07"
+        iyz="-3.11208361915813E-16"
+        izz="7.80238745763643E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette13.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette13.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roulette13"
+    type="continuous">
+    <origin
+      xyz="-0.0308 -0.00777054372791196 -0.0519439936334191"
+      rpy="0.0852111965066567 -0.148493497140421 -1.5707963267949" />
+    <parent
+      link="Roue1" />
+    <child
+      link="roulette13" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roulette14">
+    <inertial>
+      <origin
+        xyz="2.03977772172959E-10 8.6216644934467E-11 3.11255743401517E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031399" />
+      <inertia
+        ixx="4.31411689474061E-07"
+        ixy="1.23586315699359E-16"
+        ixz="4.46215633124585E-17"
+        iyy="7.8023874611177E-07"
+        iyz="7.54346102303203E-17"
+        izz="7.80238746293488E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette14.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette14.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roulette14"
+    type="continuous">
+    <origin
+      xyz="-0.0308 0.0312353459765878 -0.042224554303615"
+      rpy="-0.330743563956394 0.636904666257029 -1.5707963267949" />
+    <parent
+      link="Roue1" />
+    <child
+      link="roulette14" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roulette15">
+    <inertial>
+      <origin
+        xyz="-6.45179742964075E-11 -1.1721446036006E-10 1.81391457410029E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031397" />
+      <inertia
+        ixx="4.31411690548991E-07"
+        ixy="5.31451731426173E-17"
+        ixz="-8.22434680332117E-17"
+        iyy="7.80238747535725E-07"
+        iyz="-5.9766892622934E-16"
+        izz="7.80238746997033E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette15.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette15.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roulette15"
+    type="continuous">
+    <origin
+      xyz="-0.0308 0.051943993633419 -0.0077705437279125"
+      rpy="-0.518820397386522 1.42230282965447 -1.5707963267949" />
+    <parent
+      link="Roue1" />
+    <child
+      link="roulette15" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roulette16">
+    <inertial>
+      <origin
+        xyz="2.89257569285883E-10 -5.87843385080333E-11 1.00624952814599E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031394" />
+      <inertia
+        ixx="4.31411689619636E-07"
+        ixy="-1.19494577463859E-16"
+        ixz="2.04546942407787E-16"
+        iyy="7.80238745777962E-07"
+        iyz="-1.66276107879041E-16"
+        izz="7.80238745590473E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette16.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roulette16.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roulette16"
+    type="continuous">
+    <origin
+      xyz="-0.0308 0.042224554303615 0.031235345976588"
+      rpy="2.70702979309714 0.933891660537878 1.5707963267949" />
+    <parent
+      link="Roue1" />
+    <child
+      link="roulette16" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="Roue2">
+    <inertial>
+      <origin
+        xyz="0.021158838082035 -9.16243809341669E-06 -2.61859768342643E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.198356218737252" />
+      <inertia
+        ixx="0.000199913841811185"
+        ixy="6.09717706545227E-09"
+        ixz="1.74443612152099E-09"
+        iyy="0.000118377070384654"
+        iyz="-1.32265268673335E-08"
+        izz="0.000118334678832408" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/Roue2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/Roue2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_roue2"
+    type="continuous">
+    <origin
+      xyz="0.189944330364135 -0.0685169223077405 0.000121669922947528"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Roue2" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue2_roulette1">
+    <inertial>
+      <origin
+        xyz="-1.29762894873764E-10 2.26836022187982E-10 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031394" />
+      <inertia
+        ixx="4.31411690684267E-07"
+        ixy="-2.06854604263242E-16"
+        ixz="-2.48340369420391E-22"
+        iyy="7.80238746432658E-07"
+        iyz="2.88095088253132E-23"
+        izz="7.80238747879052E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue2_roulette1"
+    type="continuous">
+    <origin
+      xyz="0.0118 -0.0144435482732412 0.0504969676089033"
+      rpy="-1.5707963267949 0.27858970239164 -1.5707963267949" />
+    <parent
+      link="Roue2" />
+    <child
+      link="roue2_roulette1" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue2_roulette2">
+    <inertial>
+      <origin
+        xyz="2.17557707959948E-10 -1.95935809244041E-10 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031393" />
+      <inertia
+        ixx="4.31411690317044E-07"
+        ixy="-2.99564530862153E-16"
+        ixz="2.5401701632074E-23"
+        iyy="7.80238746004077E-07"
+        iyz="8.68415612779801E-25"
+        izz="7.80238747083247E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue2_roulette2"
+    type="continuous">
+    <origin
+      xyz="0.0118 0.0254936172972089 0.045919879154017"
+      rpy="1.5707963267949 -0.50680846100581 -1.5707963267949" />
+    <parent
+      link="Roue2" />
+    <child
+      link="roue2_roulette2" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue2_roulette3">
+    <inertial>
+      <origin
+        xyz="1.29762908751552E-10 -2.26835994432406E-10 -2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031398" />
+      <inertia
+        ixx="4.3141169068427E-07"
+        ixy="-2.06854538088793E-16"
+        ixz="2.85205064071251E-22"
+        iyy="7.80238746432661E-07"
+        iyz="-3.15379841775227E-23"
+        izz="7.80238747879055E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue2_roulette3"
+    type="continuous">
+    <origin
+      xyz="0.0118 0.0504969676089031 0.0144435482732418"
+      rpy="1.5707963267949 1.29220662440325 1.5707963267949" />
+    <parent
+      link="Roue2" />
+    <child
+      link="roue2_roulette3" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue2_roulette4">
+    <inertial>
+      <origin
+        xyz="-2.17557728776629E-10 -1.959357988357E-10 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031394" />
+      <inertia
+        ixx="4.31411690317045E-07"
+        ixy="2.99564663211051E-16"
+        ixz="-1.37154858030964E-22"
+        iyy="7.80238746004078E-07"
+        iyz="-1.55724174227028E-23"
+        izz="7.80238747083248E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue2_roulette4"
+    type="continuous">
+    <origin
+      xyz="0.0118 0.0459198791540173 -0.0254936172972084"
+      rpy="-1.5707963267949 1.0639878657891 -1.5707963267949" />
+    <parent
+      link="Roue2" />
+    <child
+      link="roue2_roulette4" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue2_roulette5">
+    <inertial>
+      <origin
+        xyz="1.29762891404317E-10 -2.26835994432406E-10 2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031396" />
+      <inertia
+        ixx="4.31411690684269E-07"
+        ixy="-2.0685443882712E-16"
+        ixz="5.09695780809695E-23"
+        iyy="7.8023874643266E-07"
+        iyz="-3.14959262968551E-23"
+        izz="7.80238747879053E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue2_roulette5"
+    type="continuous">
+    <origin
+      xyz="0.0118 0.0144435482732416 -0.0504969676089032"
+      rpy="-1.5707963267949 0.278589702391647 -1.5707963267949" />
+    <parent
+      link="Roue2" />
+    <child
+      link="roue2_roulette5" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue2_roulette6">
+    <inertial>
+      <origin
+        xyz="-2.17557728776629E-10 1.95935800570424E-10 2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031394" />
+      <inertia
+        ixx="4.31411690317045E-07"
+        ixy="-2.99564451452814E-16"
+        ixz="-9.73799006102537E-23"
+        iyy="7.80238746004078E-07"
+        iyz="-2.92717491362247E-23"
+        izz="7.80238747083248E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue2_roulette6"
+    type="continuous">
+    <origin
+      xyz="0.0118 -0.0254936172972086 -0.0459198791540172"
+      rpy="1.5707963267949 -0.506808461005803 -1.5707963267949" />
+    <parent
+      link="Roue2" />
+    <child
+      link="roue2_roulette6" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue2_roulette7">
+    <inertial>
+      <origin
+        xyz="-1.29762894873764E-10 2.26835994432406E-10 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031398" />
+      <inertia
+        ixx="4.3141169068427E-07"
+        ixy="-2.06854505001569E-16"
+        ixz="-2.523830170733E-22"
+        iyy="7.80238746432661E-07"
+        iyz="3.86227974342537E-23"
+        izz="7.80238747879054E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue2_roulette7"
+    type="continuous">
+    <origin
+      xyz="0.0118 -0.0504969676089032 -0.0144435482732414"
+      rpy="1.5707963267949 1.29220662440325 1.5707963267949" />
+    <parent
+      link="Roue2" />
+    <child
+      link="roue2_roulette7" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue2_roulette8">
+    <inertial>
+      <origin
+        xyz="2.17557707959948E-10 1.95935795366253E-10 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031396" />
+      <inertia
+        ixx="4.31411690317046E-07"
+        ixy="2.99564835264618E-16"
+        ixz="4.72303070127006E-22"
+        iyy="7.8023874600408E-07"
+        iyz="1.89702513301762E-23"
+        izz="7.8023874708325E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette8.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette8.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue2_roulette8"
+    type="continuous">
+    <origin
+      xyz="0.0118 -0.0459198791540171 0.0254936172972087"
+      rpy="-1.5707963267949 1.06398786578909 -1.5707963267949" />
+    <parent
+      link="Roue2" />
+    <child
+      link="roue2_roulette8" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue2_roulette9">
+    <inertial>
+      <origin
+        xyz="3.70512613645513E-11 -1.62800731229318E-10 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031397" />
+      <inertia
+        ixx="4.31411689982908E-07"
+        ixy="-4.23897870063986E-17"
+        ixz="-1.23372176297159E-22"
+        iyy="7.80238746650032E-07"
+        iyz="-1.0154660879658E-23"
+        izz="7.80238747395064E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette9.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette9.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue2_roulette9"
+    type="continuous">
+    <origin
+      xyz="0.0308 0.00593832595991392 0.0521852096787001"
+      rpy="1.5707963267949 -0.113305890658723 -1.5707963267949" />
+    <parent
+      link="Roue2" />
+    <child
+      link="roue2_roulette9" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue2_roulette10">
+    <inertial>
+      <origin
+        xyz="-1.58598786881292E-10 -9.96642490758148E-11 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031397" />
+      <inertia
+        ixx="4.31411689517092E-07"
+        ixy="1.11081330071027E-16"
+        ixz="2.95098417723851E-23"
+        iyy="7.80238746315791E-07"
+        iyz="-1.69175575136229E-23"
+        izz="7.80238746595008E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette10.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette10.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue2_roulette10"
+    type="continuous">
+    <origin
+      xyz="0.0308 0.041099546196602 0.0327014850862993"
+      rpy="1.5707963267949 -0.898704054056173 -1.5707963267949" />
+    <parent
+      link="Roue2" />
+    <child
+      link="roue2_roulette10" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue2_roulette11">
+    <inertial>
+      <origin
+        xyz="3.70512509562104E-11 -1.62800724290424E-10 -2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031399" />
+      <inertia
+        ixx="4.31411689982909E-07"
+        ixy="-4.23945879626739E-17"
+        ixz="-1.89413590774353E-22"
+        iyy="7.80238746650033E-07"
+        iyz="-5.47884555783961E-24"
+        izz="7.80238747395065E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue2_roulette11"
+    type="continuous">
+    <origin
+      xyz="0.0308 0.0521852096787001 -0.00593832595991337"
+      rpy="-1.5707963267949 -1.45749043613617 1.5707963267949" />
+    <parent
+      link="Roue2" />
+    <child
+      link="roue2_roulette11" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue2_roulette12">
+    <inertial>
+      <origin
+        xyz="-1.5859876606461E-10 -9.96642456063679E-11 2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031398" />
+      <inertia
+        ixx="4.31411689517092E-07"
+        ixy="1.11081449185036E-16"
+        ixz="4.0319349688928E-23"
+        iyy="7.80238746315792E-07"
+        iyz="7.06604663335077E-25"
+        izz="7.80238746595009E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette12.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette12.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue2_roulette12"
+    type="continuous">
+    <origin
+      xyz="0.0308 0.0327014850862998 -0.0410995461966016"
+      rpy="-1.5707963267949 -0.672092272738735 1.5707963267949" />
+    <parent
+      link="Roue2" />
+    <child
+      link="roue2_roulette12" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue2_roulette13">
+    <inertial>
+      <origin
+        xyz="3.70512630992748E-11 1.62800729494594E-10 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031396" />
+      <inertia
+        ixx="4.31411689982908E-07"
+        ixy="4.23898597982925E-17"
+        ixz="4.77325468799067E-23"
+        iyy="7.80238746650031E-07"
+        iyz="1.31895925753372E-24"
+        izz="7.80238747395064E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette13.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette13.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue2_roulette13"
+    type="continuous">
+    <origin
+      xyz="0.0308 -0.00593832595991355 -0.0521852096787001"
+      rpy="1.5707963267949 0.113305890658716 1.5707963267949" />
+    <parent
+      link="Roue2" />
+    <child
+      link="roue2_roulette13" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue2_roulette14">
+    <inertial>
+      <origin
+        xyz="-1.58598786881292E-10 9.9664235198027E-11 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031397" />
+      <inertia
+        ixx="4.31411689517092E-07"
+        ixy="-1.11081290366358E-16"
+        ixz="-1.36741180442771E-22"
+        iyy="7.80238746315791E-07"
+        iyz="-1.93125675078491E-24"
+        izz="7.80238746595007E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette14.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette14.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue2_roulette14"
+    type="continuous">
+    <origin
+      xyz="0.0308 -0.0410995461966017 -0.0327014850862996"
+      rpy="1.5707963267949 0.898704054056166 1.5707963267949" />
+    <parent
+      link="Roue2" />
+    <child
+      link="roue2_roulette14" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue2_roulette15">
+    <inertial>
+      <origin
+        xyz="3.70512509562104E-11 1.62800731229318E-10 2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031396" />
+      <inertia
+        ixx="4.31411689982908E-07"
+        ixy="4.23898730331823E-17"
+        ixz="-1.55846600679212E-22"
+        iyy="7.80238746650032E-07"
+        iyz="-1.65385652002641E-23"
+        izz="7.80238747395065E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette15.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette15.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue2_roulette15"
+    type="continuous">
+    <origin
+      xyz="0.0308 -0.0521852096787001 0.00593832595991373"
+      rpy="-1.5707963267949 1.45749043613618 -1.5707963267949" />
+    <parent
+      link="Roue2" />
+    <child
+      link="roue2_roulette15" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue2_roulette16">
+    <inertial>
+      <origin
+        xyz="-1.58598786881292E-10 9.96642629536026E-11 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031397" />
+      <inertia
+        ixx="4.31411689517092E-07"
+        ixy="-1.11081608003713E-16"
+        ixz="3.42759913567263E-24"
+        iyy="7.80238746315791E-07"
+        iyz="-4.91257793823626E-24"
+        izz="7.80238746595008E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette16.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue2_roulette16.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue2_roulette16"
+    type="continuous">
+    <origin
+      xyz="0.0308 -0.0327014850862995 0.0410995461966018"
+      rpy="-1.5707963267949 0.672092272738728 -1.5707963267949" />
+    <parent
+      link="Roue2" />
+    <child
+      link="roue2_roulette16" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="Roue3">
+    <inertial>
+      <origin
+        xyz="0.0210347619332206 2.07332838350616E-06 9.30105326420183E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.198356197932139" />
+      <inertia
+        ixx="0.000199913810608803"
+        ixy="1.3816665892519E-09"
+        ixz="6.1895862040386E-09"
+        iyy="0.000118333295278069"
+        iyz="-1.06371069341303E-08"
+        izz="0.00011837850775697" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/Roue3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/Roue3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_roue3"
+    type="continuous">
+    <origin
+      xyz="-0.110258869635864 -0.0685169223077405 0.173678703403934"
+      rpy="1.5707963267949 -1.04719755119661 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="Roue3" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue3_roulette1">
+    <inertial>
+      <origin
+        xyz="2.1680098341581E-10 5.13996900597391E-11 3.05013375667684E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031396" />
+      <inertia
+        ixx="4.31411689338292E-07"
+        ixy="7.83109409725228E-17"
+        ixz="4.64758706352309E-17"
+        iyy="7.8023874603485E-07"
+        iyz="4.40698603136653E-17"
+        izz="7.80238746082964E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue3_roulette1"
+    type="continuous">
+    <origin
+      xyz="0.0113936 0.00900757829178358 -0.0517438243439105"
+      rpy="-0.0986944893951291 0.172353115413479 -1.5707963267949" />
+    <parent
+      link="Roue3" />
+    <child
+      link="roue3_roulette1" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue3_roulette2">
+    <inertial>
+      <origin
+        xyz="-3.2285656093034E-10 -2.31279162488107E-11 2.59914867406508E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031394" />
+      <inertia
+        ixx="4.31411689271901E-07"
+        ixy="5.24751204505024E-17"
+        ixz="-5.89716513977061E-17"
+        iyy="7.80238745223264E-07"
+        iyz="-1.68977779021313E-17"
+        izz="7.8023874521931E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue3_roulette2"
+    type="continuous">
+    <origin
+      xyz="0.0113936 -0.0302190893859152 -0.042957728770294"
+      rpy="0.320716371212577 -0.613045047983971 -1.5707963267949" />
+    <parent
+      link="Roue3" />
+    <child
+      link="roue3_roulette2" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue3_roulette3">
+    <inertial>
+      <origin
+        xyz="8.26523988139982E-11 1.33796917989315E-10 1.97010130431607E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031397" />
+      <inertia
+        ixx="4.31411690832129E-07"
+        ixy="7.77144821259165E-17"
+        ixz="1.14431709336888E-16"
+        iyy="7.80238747664347E-07"
+        iyz="7.40964039700588E-16"
+        izz="7.80238747076526E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue3_roulette3"
+    type="continuous">
+    <origin
+      xyz="0.0113936 -0.0517438243439104 -0.00900757829178414"
+      rpy="0.517159467772312 -1.39844321138142 -1.5707963267949" />
+    <parent
+      link="Roue3" />
+    <child
+      link="roue3_roulette3" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue3_roulette4">
+    <inertial>
+      <origin
+        xyz="-2.71242146798745E-10 7.57188756139726E-11 1.31179220264066E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031396" />
+      <inertia
+        ixx="4.31411689882758E-07"
+        ixy="-1.44332078254083E-16"
+        ixz="-2.500487582409E-16"
+        iyy="7.8023874611898E-07"
+        iyz="2.79210421783861E-16"
+        izz="7.80238745796426E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue3_roulette4"
+    type="continuous">
+    <origin
+      xyz="0.0113936 -0.0429577287702939 0.0302190893859154"
+      rpy="-2.70041934314413 -0.957751278810922 1.5707963267949" />
+    <parent
+      link="Roue3" />
+    <child
+      link="roue3_roulette4" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue3_roulette5">
+    <inertial>
+      <origin
+        xyz="3.21436412209497E-10 -1.10094738881017E-10 1.13170341153879E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031397" />
+      <inertia
+        ixx="4.31411689938615E-07"
+        ixy="-2.4869337979384E-16"
+        ixz="2.55640525651538E-16"
+        iyy="7.80238745577159E-07"
+        iyz="-3.50236563013412E-16"
+        izz="7.80238745557856E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue3_roulette5"
+    type="continuous">
+    <origin
+      xyz="0.0113936 -0.00900757829178397 0.0517438243439105"
+      rpy="-3.04289816419467 -0.172353115413472 1.5707963267949" />
+    <parent
+      link="Roue3" />
+    <child
+      link="roue3_roulette5" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue3_roulette6">
+    <inertial>
+      <origin
+        xyz="-2.39629316389767E-10 8.33673963196446E-11 3.97742117019817E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031395" />
+      <inertia
+        ixx="4.31411689477714E-07"
+        ixy="-1.40390178823464E-16"
+        ixz="-6.69795008810482E-17"
+        iyy="7.80238745906722E-07"
+        iyz="9.32096628029007E-17"
+        izz="7.80238746057621E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue3_roulette6"
+    type="continuous">
+    <origin
+      xyz="0.0113936 0.0302190893859155 0.0429577287702938"
+      rpy="2.82087628237721 0.613045047983978 1.5707963267949" />
+    <parent
+      link="Roue3" />
+    <child
+      link="roue3_roulette6" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue3_roulette7">
+    <inertial>
+      <origin
+        xyz="8.21178819387924E-11 -1.33819899605925E-10 1.95230692723314E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031394" />
+      <inertia
+        ixx="4.3141169081268E-07"
+        ixy="-7.72252444982607E-17"
+        ixz="1.12664692729797E-16"
+        iyy="7.80238747645963E-07"
+        iyz="-7.34397824577041E-16"
+        izz="7.80238747077935E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue3_roulette7"
+    type="continuous">
+    <origin
+      xyz="0.0113936 0.0517438243439104 0.00900757829178379"
+      rpy="2.62443318581748 1.39844321138143 1.5707963267949" />
+    <parent
+      link="Roue3" />
+    <child
+      link="roue3_roulette7" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue3_roulette8">
+    <inertial>
+      <origin
+        xyz="-2.96135366228967E-10 -7.19801440673962E-11 1.23261907625238E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031396" />
+      <inertia
+        ixx="4.31411689810609E-07"
+        ixy="1.49798061272054E-16"
+        ixz="-2.56519732615898E-16"
+        iyy="7.8023874586384E-07"
+        iyz="-2.49404397778611E-16"
+        izz="7.80238745582391E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette8.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette8.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue3_roulette8"
+    type="continuous">
+    <origin
+      xyz="0.0113936 0.0429577287702936 -0.0302190893859157"
+      rpy="-0.441173310445661 0.957751278810915 -1.5707963267949" />
+    <parent
+      link="Roue3" />
+    <child
+      link="roue3_roulette8" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue3_roulette9">
+    <inertial>
+      <origin
+        xyz="-2.63648908260805E-10 8.35803648513433E-12 -2.56007159915583E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031392" />
+      <inertia
+        ixx="4.3141168925826E-07"
+        ixy="-1.54866474817852E-17"
+        ixz="4.7432839194616E-17"
+        iyy="7.80238745710768E-07"
+        iyz="-6.01472801889358E-18"
+        izz="7.80238745694308E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette9.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette9.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue3_roulette9"
+    type="continuous">
+    <origin
+      xyz="0.0303936 0.0281590535998151 -0.0443353981010525"
+      rpy="-2.84140706857503 -0.565855685760552 1.5707963267949" />
+    <parent
+      link="Roue3" />
+    <child
+      link="roue3_roulette9" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue3_roulette10">
+    <inertial>
+      <origin
+        xyz="1.29132021048362E-10 -3.73365227623879E-12 2.93065571810303E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031395" />
+      <inertia
+        ixx="4.3141168926241E-07"
+        ixy="-3.38794153747631E-18"
+        ixz="2.65952198872293E-17"
+        iyy="7.802387464591E-07"
+        iyz="-3.07576853738248E-18"
+        izz="7.80238746435348E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette10.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette10.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue3_roulette10"
+    type="continuous">
+    <origin
+      xyz="0.0303936 -0.0114384028916348 -0.0512613183960842"
+      rpy="3.01651193104433 0.219542477636898 1.5707963267949" />
+    <parent
+      link="Roue3" />
+    <child
+      link="roue3_roulette10" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue3_roulette11">
+    <inertial>
+      <origin
+        xyz="3.4053249803323E-10 9.51135836757544E-11 1.56343438195705E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031395" />
+      <inertia
+        ixx="4.31411690179278E-07"
+        ixy="2.27615745759915E-16"
+        ixz="3.74145861277233E-16"
+        iyy="7.80238745726568E-07"
+        iyz="4.18008019847808E-16"
+        izz="7.80238745293766E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue3_roulette11"
+    type="continuous">
+    <origin
+      xyz="0.0303936 -0.0443353981010523 -0.0281590535998156"
+      rpy="0.453483575384755 -1.00494064103433 -1.5707963267949" />
+    <parent
+      link="Roue3" />
+    <child
+      link="roue3_roulette11" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue3_roulette12">
+    <inertial>
+      <origin
+        xyz="1.17369530761025E-10 1.54104201621763E-10 -2.15039763773461E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031399" />
+      <inertia
+        ixx="4.31411691205309E-07"
+        ixy="1.27107732754838E-16"
+        ixz="-1.77368771946944E-16"
+        iyy="7.80238747775581E-07"
+        iyz="-9.31527643572857E-16"
+        izz="7.80238747143272E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette12.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette12.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue3_roulette12"
+    type="continuous">
+    <origin
+      xyz="0.0303936 -0.0512613183960843 0.0114384028916342"
+      rpy="-0.513142891019452 1.35125384915801 -1.5707963267949" />
+    <parent
+      link="Roue3" />
+    <child
+      link="roue3_roulette12" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="roue3_roulette13">
+    <inertial>
+      <origin
+        xyz="8.58562942962493E-11 -4.18187706685558E-11 3.05875325068428E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031399" />
+      <inertia
+        ixx="4.31411689313336E-07"
+        ixy="-2.52316821306071E-17"
+        ixz="1.84553126734543E-17"
+        iyy="7.80238746592023E-07"
+        iyz="-3.59566280202839E-17"
+        izz="7.80238746614883E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette13.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette13.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue3_roulette13"
+    type="continuous">
+    <origin
+      xyz="0.0303936 -0.0281590535998155 0.0443353981010523"
+      rpy="-2.84140706857503 -0.565855685760559 1.5707963267949" />
+    <parent
+      link="Roue3" />
+    <child
+      link="roue3_roulette13" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue3_roulette14">
+    <inertial>
+      <origin
+        xyz="-3.58946983247677E-10 1.35911115695109E-10 1.09613380872009E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031395" />
+      <inertia
+        ixx="4.31411690094865E-07"
+        ixy="-3.42836890630824E-16"
+        ixz="-2.76500578097137E-16"
+        iyy="7.80238745196173E-07"
+        iyz="4.18775054503662E-16"
+        izz="7.80238745377672E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette14.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette14.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue3_roulette14"
+    type="continuous">
+    <origin
+      xyz="0.0303936 0.0114384028916344 0.0512613183960843"
+      rpy="3.01651193104433 0.219542477636891 1.5707963267949" />
+    <parent
+      link="Roue3" />
+    <child
+      link="roue3_roulette14" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue3_roulette15">
+    <inertial>
+      <origin
+        xyz="-3.16079572237893E-10 -1.04638436804194E-10 -1.85352261317107E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031397" />
+      <inertia
+        ixx="4.31411690511395E-07"
+        ixy="2.32428752402336E-16"
+        ixz="4.11714697398607E-16"
+        iyy="7.80238746230871E-07"
+        iyz="5.45194556445243E-16"
+        izz="7.80238745572918E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette15.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette15.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue3_roulette15"
+    type="continuous">
+    <origin
+      xyz="0.0303936 0.0443353981010524 0.0281590535998153"
+      rpy="0.453483575384757 -1.00494064103434 -1.5707963267949" />
+    <parent
+      link="Roue3" />
+    <child
+      link="roue3_roulette15" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="roue3_roulette16">
+    <inertial>
+      <origin
+        xyz="1.19836252032712E-10 -1.58140833761422E-10 -2.19109647092708E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.00837422821031395" />
+      <inertia
+        ixx="4.31411691290407E-07"
+        ixy="-1.33178977061904E-16"
+        ixz="-1.84523520286059E-16"
+        iyy="7.80238747817023E-07"
+        iyz="9.74020121743581E-16"
+        izz="7.80238747170476E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette16.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robot_mobile/meshes/roue3_roulette16.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_roue3_roulette16"
+    type="continuous">
+    <origin
+      xyz="0.0303936 0.0512613183960842 -0.0114384028916346"
+      rpy="-2.62844976257034 -1.351253849158 1.5707963267949" />
+    <parent
+      link="Roue3" />
+    <child
+      link="roue3_roulette16" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+</robot>
